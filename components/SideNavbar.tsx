@@ -4,30 +4,31 @@ import * as React from "react";
 import { Nav } from "./ui/nav";
 import {
   Activity,
-  Archive,
-  ArchiveX,
   BarChart2,
-  File,
   Flag,
   Layers,
   LifeBuoy,
-  Send,
+  Search,
   Settings,
-  Trash2,
   Users,
 } from "lucide-react";
 import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
 type props = {};
 
 export default function SideNavBar({}: props) {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
   return (
-    <div className="relative min-w-[80px] border-r px-3 pb-10 pt-10">
-      <div className="w-full">
-        <Button variant="secondary" className="pr-16">
+    <div className="relative min-w-[220px] border-r px-3 pb-10 pt-10">
+      <div className="mb-8">
+        <Button variant="secondary" className="w-full">
           Logo
         </Button>
+      </div>
+
+      <div>
+        <Input type="search" placeholder="Search" />
       </div>
 
       <Nav
