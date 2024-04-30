@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import SideNavBar from "@/components/SideNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,8 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen w-full bg-white text-black flex",
-          inter.className
+          "min-h-screen w-full bg-white text-black flex text-base",
+          poppins.className
         )}
       >
         {/* <p className="border">Sidebar</p> */}
