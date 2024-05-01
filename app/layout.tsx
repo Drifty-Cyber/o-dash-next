@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import SideNavBar from "@/components/SideNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({ weight: "600", subsets: ["latin"] });
+// const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,13 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen w-full bg-white text-black flex text-base",
-          poppins.className
+          "min-h-screen w-full bg-white text-[#374151] flex text-base font-bold",
+          inter.className
         )}
       >
-        {/* <p className="border">Sidebar</p> */}
         <SideNavBar />
-        <div className="p-8 w-full">{children}</div>
+        <div className="p-8 w-full bg-[#FCFCFD]">{children}</div>
       </body>
     </html>
   );
