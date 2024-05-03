@@ -1,4 +1,5 @@
 import Card, { CardProps } from "@/components/Card";
+import { DatePicker } from "@/components/DatePicker";
 import MenuBar from "@/components/MenuBar";
 import PageTitle from "@/components/PageTitle";
 import TabbedButtons from "@/components/TabbedButtons";
@@ -52,9 +53,9 @@ const cardData: CardProps[] = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-5 w-full">
+    <div className="flex flex-col gap-[32px] w-full">
       {/* Name and Search */}
-      <section className="grid grid-cols-2">
+      <section className="grid grid-cols-2 gap-[20px]">
         <section className="flex flex-col justify-start">
           <PageTitle
             title="Welcome back, Mr Adeshina"
@@ -77,10 +78,14 @@ export default function Home() {
             className="outline-none w-full py-[10px] px-[14px]"
           ></input>
         </section>
+      </section>
 
-        {/* Tabs/Filters */}
-        <section>
-          <TabbedButtons />
+      {/* Tabs/Filters */}
+      <section className="grid grid-cols-2">
+        <TabbedButtons />
+
+        <section className="justify-self-end">
+          <DatePicker />
         </section>
       </section>
 
