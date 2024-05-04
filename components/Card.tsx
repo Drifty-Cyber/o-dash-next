@@ -13,12 +13,16 @@ export type CardProps = {
 };
 
 export default function Card(props: CardProps) {
+  const contentCardStyle = {
+    backgroundColor: props.cardColor,
+  };
+
   return (
-    // <CardContent className={cn(props.cardColor)}>
-    <CardContent className={`bg-[${props.cardColor}]`}>
+    <CardContent style={contentCardStyle}>
+      {/* // <CardContent className={`bg-[${props.cardColor}]`}> */}
       <section className="flex justify-between gap-2">
         {/* Icon */}
-        <props.icon className="h-4 w-4 text-gray-400" />
+        <props.icon className="h-[40px] w-[40px] text-gray-400" />
 
         {/* Interest */}
         <p className="text-xs text-gray-500">{props.interest}</p>
@@ -41,7 +45,7 @@ export function CardContent(props: React.HTMLAttributes<HTMLDivElement>) {
     <div
       {...props}
       className={cn(
-        "flex flex-col gap-3 w-full rounded-xl border p-5 shadow bg-[red]",
+        "h-[232.5px] flex flex-col gap-3 w-full rounded-xl border p-5 shadow",
         props.className
       )}
     />

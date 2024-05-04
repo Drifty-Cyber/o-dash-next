@@ -17,17 +17,17 @@ export default function TabbedButtons({}: Props) {
   return (
     <div className="flex border rounded-[8px] max-w-fit h-10">
       <button
-        className={`text-[#344054] p-1 hover:text-[#1D2939] px-4 bg-white py-2 border-transparent focus:outline-none ${
-          activeTab === 1 ? "border-gray-700 text-[#1D2939] bg-[#D0D5DD]" : ""
+        className={`text-[#344054] p-1 hover:text-[#1D2939] px-4 py-2 focus:outline-none ${
+          activeTab === 1 ? "text-[#1D2939] bg-[#D0D5DD]" : ""
         }`}
         onClick={() => handleClick(1)}
       >
         12 months
       </button>
       <button
-        className={`text-[#344054] hover:text-[#1D2939] px-4 bg-white py-2 focus:outline-none ${
+        className={`text-[#344054] hover:text-[#1D2939] px-4 py-2 border-x focus:outline-none ${
           activeTab === 2
-            ? "border-gray-700 text-[#1D2939] bg-[#D0D5DD]"
+            ? "border-gray-700 text-[#1D2939] bg-[#D0D5DD] focus:border-transparent"
             : "bg-transparent"
         }`}
         onClick={() => handleClick(2)}
@@ -35,9 +35,9 @@ export default function TabbedButtons({}: Props) {
         30 days
       </button>
       <button
-        className={`text-[#344054] hover:text-[#1D2939] px-4 bg-white py-2 border-transparent focus:outline-none ${
+        className={`text-[#344054] hover:text-[#1D2939] px-4 py-2 border-r focus:outline-none ${
           activeTab === 3
-            ? "border-gray-700 text-[#1D2939] bg-[#D0D5DD]"
+            ? "border-gray-700 text-[#1D2939] bg-[#D0D5DD] focus:border-transparent"
             : "bg-transparent"
         }`}
         onClick={() => handleClick(3)}
@@ -45,7 +45,7 @@ export default function TabbedButtons({}: Props) {
         7 days
       </button>
       <button
-        className={`text-[#344054] hover:text-[#1D2939] px-4 bg-white py-2 border-transparent focus:outline-none ${
+        className={`text-[#344054] hover:text-[#1D2939] px-4 py-2 border-transparent focus:outline-none ${
           activeTab === 4
             ? "border-gray-700 text-[#1D2939] bg-[#D0D5DD]"
             : "bg-transparent"

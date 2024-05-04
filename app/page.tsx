@@ -1,5 +1,8 @@
+"use client";
+
 import Card, { CardProps } from "@/components/Card";
 import { DatePicker } from "@/components/DatePicker";
+import { Filter } from "@/components/Filter";
 import MenuBar from "@/components/MenuBar";
 import PageTitle from "@/components/PageTitle";
 import TabbedButtons from "@/components/TabbedButtons";
@@ -11,6 +14,7 @@ import {
   Gem,
   Search,
 } from "lucide-react";
+import { useState } from "react";
 
 const cardData: CardProps[] = [
   {
@@ -52,6 +56,12 @@ const cardData: CardProps[] = [
 ];
 
 export default function Home() {
+  const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
+
+  function handleFilterChange(filter: string) {
+    setSelectedFilter(filter);
+  }
+
   return (
     <div className="flex flex-col gap-[32px] w-full">
       {/* Name and Search */}
@@ -84,8 +94,14 @@ export default function Home() {
       <section className="grid grid-cols-2">
         <TabbedButtons />
 
-        <section className="justify-self-end">
-          <DatePicker />
+        <section className="justify-self-end grid grid-cols-2 gap-[32px]">
+          <section>
+            <DatePicker />
+          </section>
+
+          <section className="grid justify-self-end">
+            <Filter onChange={handleFilterChange} />
+          </section>
         </section>
       </section>
 
