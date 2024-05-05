@@ -15,17 +15,27 @@ export type CardProps = {
 export default function Card(props: CardProps) {
   const contentCardStyle = {
     backgroundColor: props.cardColor,
+    // color: props.cardColor,
   };
 
   return (
     <CardContent style={contentCardStyle}>
       {/* // <CardContent className={`bg-[${props.cardColor}]`}> */}
       <section className="flex justify-between gap-2">
-        {/* Icon */}
-        <props.icon className="h-[40px] w-[40px] text-gray-400" />
+        <div className="flex h-[40px] w-[40px] bg-white rounded-lg items-center justify-center">
+          {/* Icon */}
+          <span>
+            <props.icon className="text-gray-400" color={props.cardColor} />
+          </span>
+        </div>
 
         {/* Interest */}
-        <p className="text-xs text-gray-500">{props.interest}</p>
+        <div className="flex flex-col w-[85px] h-[24px] items-center justify-center rounded-2xl px-[2px] pl-[8px] pr-[10px] leading-5 text-sm">
+          <span>
+            <props.interestIcon />
+          </span>
+          <p className="text-xs text-gray-500">{props.interest}</p>
+        </div>
       </section>
 
       <section>

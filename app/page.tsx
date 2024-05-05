@@ -13,13 +13,14 @@ import {
   BarChart2,
   Gem,
   Search,
+  Coins,
 } from "lucide-react";
 import { useState } from "react";
 
 const cardData: CardProps[] = [
   {
     label: "Total Savings",
-    icon: Gem,
+    icon: Coins,
     amount: "$64,240.60",
     description: "View report",
     interest: "3.4% p.a",
@@ -28,7 +29,7 @@ const cardData: CardProps[] = [
   },
   {
     label: "Current Balance",
-    icon: Gem,
+    icon: Coins,
     amount: "$41,382.80",
     description: "View report",
     interest: "3.4% p.a",

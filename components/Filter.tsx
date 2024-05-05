@@ -20,7 +20,7 @@ export function Filter({ onChange }: props) {
   }
 
   return (
-    <section className="relative">
+    <section className="relative transition-all">
       <button
         className="max-w-[104px] h-[40px] text-sm flex items-center py-2 px-4 border rounded-lg bg-white text-[#344054] hover:bg-gray-100 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
