@@ -15,13 +15,11 @@ export type CardProps = {
 export default function Card(props: CardProps) {
   const contentCardStyle = {
     backgroundColor: props.cardColor,
-    // color: props.cardColor,
   };
 
   return (
     <CardContent style={contentCardStyle}>
-      {/* // <CardContent className={`bg-[${props.cardColor}]`}> */}
-      <section className="flex justify-between gap-2">
+      <section className="flex justify-between items-center gap-2">
         <div className="flex h-[40px] w-[40px] bg-white rounded-lg items-center justify-center">
           {/* Icon */}
           <span>
@@ -30,21 +28,27 @@ export default function Card(props: CardProps) {
         </div>
 
         {/* Interest */}
-        <div className="flex flex-col w-[85px] h-[24px] items-center justify-center rounded-2xl px-[2px] pl-[8px] pr-[10px] leading-5 text-sm">
-          <span>
-            <props.interestIcon />
+        <div className="flex flex-row w-[85px] h-[24px] items-center justify-center rounded-2xl px-[2px] pl-[8px] pr-[10px] leading-5 text-sm text-[black] bg-[#e8ebe8cc]">
+          <span className="">
+            <props.interestIcon size={12} />
           </span>
-          <p className="text-xs text-gray-500">{props.interest}</p>
+          <span className="items-center justify-items-center py-2">
+            <p className="text-[12px] leading-[20px] font-bold">
+              {props.interest}
+            </p>
+          </span>
         </div>
       </section>
 
-      <section>
-        {/* Label */}
-        <p className="text-sm">{props.label}</p>
-      </section>
-      <section className="flex flex-col gap-1">
-        <h2 className="text-2xl font-semibold">{props.amount}</h2>
-        <p className="text-xs text-gray-500">{props.description}</p>
+      <section className="border text-white border-white/50 rounded-lg bg-white/30">
+        <section>
+          {/* Label */}
+          <p className="text-sm">{props.label}</p>
+        </section>
+        <section className="flex flex-col gap-1">
+          <h2 className="text-2xl font-semibold">{props.amount}</h2>
+          <p className="text-xs text-gray-500">{props.description}</p>
+        </section>
       </section>
     </CardContent>
   );
@@ -55,7 +59,7 @@ export function CardContent(props: React.HTMLAttributes<HTMLDivElement>) {
     <div
       {...props}
       className={cn(
-        "h-[232.5px] flex flex-col gap-3 w-full rounded-xl border p-5 shadow",
+        "h-[232.5px] flex flex-col gap-[24px] w-full rounded-xl border p-5 shadow",
         props.className
       )}
     />
