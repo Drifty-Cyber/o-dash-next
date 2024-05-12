@@ -40,14 +40,19 @@ export default function Card(props: CardProps) {
         </div>
       </section>
 
+      {/* Amount Label and Amount */}
       <section className="border text-white border-white/50 rounded-lg bg-white/30">
-        <section>
-          {/* Label */}
-          <p className="text-sm">{props.label}</p>
-        </section>
-        <section className="flex flex-col gap-1">
-          <h2 className="text-2xl font-semibold">{props.amount}</h2>
-          <p className="text-xs text-gray-500">{props.description}</p>
+        <section className="p-4">
+          <section>
+            {/* Label */}
+            <p className="text-sm">{props.label}</p>
+          </section>
+          <section className="flex flex-col gap-1">
+            <section className="mb-5 border-b-white/50">
+              <h2 className="text-2xl font-semibold">{props.amount}</h2>
+            </section>
+            <p className="text-xs text-gray-500">{props.description}</p>
+          </section>
         </section>
       </section>
     </CardContent>
