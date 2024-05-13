@@ -48,10 +48,13 @@ export default function Card(props: CardProps) {
             <p className="text-sm">{props.label}</p>
           </section>
           <section className="flex flex-col gap-1">
-            <section className="mb-5 border-b-white/50">
-              <h2 className="text-2xl font-semibold">{props.amount}</h2>
-            </section>
-            <p className="text-xs text-gray-500">{props.description}</p>
+            <h2 className="pb-5 2pt-1 border-b text-2xl font-semibold border-b-white/50">
+              {props.amount}
+            </h2>
+
+            <p className="text-xs text-[#414751] text-right pt-4">
+              {props.description}
+            </p>
           </section>
         </section>
       </section>
@@ -64,7 +67,7 @@ export function CardContent(props: React.HTMLAttributes<HTMLDivElement>) {
     <div
       {...props}
       className={cn(
-        "h-[232.5px] flex flex-col gap-[24px] w-full rounded-xl border p-5 shadow",
+        "h-auto flex flex-col gap-[24px] w-full rounded-xl border p-5 shadow",
         props.className
       )}
     />
