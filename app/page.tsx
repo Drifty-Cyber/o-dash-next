@@ -106,6 +106,7 @@ export default function Home() {
         </section>
       </section>
 
+      {/* Cards and Account Info */}
       <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
         {cardData.map((card, i) => (
           <Card
@@ -119,6 +120,19 @@ export default function Home() {
             cardColor={card.cardColor}
           />
         ))}
+      </section>
+
+      {/* Balance and Days Filter */}
+      <section className="grid grid-cols-2">
+        {/* Filter and Chart */}
+        <section>
+          <section>
+            <p>Balance over time</p>
+          </section>
+        </section>
+
+        {/* Transaction History */}
+        <section></section>
       </section>
     </div>
   );
