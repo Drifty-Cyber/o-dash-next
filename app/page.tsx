@@ -126,7 +126,7 @@ export default function Home() {
       <section className="grid grid-cols-2">
         {/* Filter and Chart */}
         <section>
-          <section>
+          <section className="text-[#101828] leading-[28px] text-[18px]">
             <p>Balance over time</p>
           </section>
         </section>
