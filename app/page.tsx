@@ -1,6 +1,7 @@
 "use client";
 
 import Card, { CardProps } from "@/components/Card";
+import ChartTabButtons from "@/components/ChartTabButtons";
 import { DatePicker } from "@/components/DatePicker";
 import { Filter } from "@/components/Filter";
 import MenuBar from "@/components/MenuBar";
@@ -58,6 +59,7 @@ const cardData: CardProps[] = [
 
 export default function Home() {
   const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
+  const chartTabs = ["12 months", "30 days", "7 days"];
 
   function handleFilterChange(filter: string) {
     setSelectedFilter(filter);
@@ -125,9 +127,13 @@ export default function Home() {
       {/* Balance and Days Filter */}
       <section className="grid grid-cols-2">
         {/* Filter and Chart */}
-        <section>
+        <section className="flex flex-row justify-between">
           <section className="text-[#101828] leading-[28px] text-[18px]">
             <p>Balance over time</p>
+          </section>
+
+          <section>
+            <ChartTabButtons options={chartTabs} />
           </section>
         </section>
 
