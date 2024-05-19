@@ -82,7 +82,6 @@ export default function Home() {
 
         <section className="w-1/2 h-14 py-[10px] px-[14px] gap-2 flex items-center border border-gray-[#D0D5DD] rounded-[8px] justify-self-end bg-[white]">
           <span>
-            {/* <CiSearch className="text-xl  " /> */}
             <Search />
           </span>
           <input

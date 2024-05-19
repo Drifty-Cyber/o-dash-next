@@ -15,7 +15,7 @@ export default function TabbedButtons({}: Props) {
   };
 
   return (
-    <div className="flex border rounded-[8px] max-w-fit h-10">
+    <div className="flex border rounded-[8px] max-w-fit h-10 transition-colors">
       <button
         className={`text-[#344054] p-1 hover:text-[#1D2939] px-4 py-2 focus:outline-none ${
           activeTab === 1 ? "text-[#1D2939] bg-[#D0D5DD]" : ""
