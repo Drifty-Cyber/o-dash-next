@@ -4,6 +4,7 @@ import Card, { CardProps } from "@/components/Card";
 import ChartTabButtons from "@/components/ChartTabButtons";
 import { DatePicker } from "@/components/DatePicker";
 import { Filter } from "@/components/Filter";
+import { FilterDropdown } from "@/components/FilterDropDown";
 import MenuBar from "@/components/MenuBar";
 import PageTitle from "@/components/PageTitle";
 import TabbedButtons from "@/components/TabbedButtons";
@@ -101,8 +102,9 @@ export default function Home() {
             <DatePicker />
           </section>
 
-          <section className="grid justify-self-end">
-            <Filter onChange={handleFilterChange} />
+          <section className="grid justify-self-end w-full">
+            {/* <Filter onChange={handleFilterChange} /> */}
+            <FilterDropdown />
           </section>
         </section>
       </section>

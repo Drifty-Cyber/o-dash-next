@@ -26,11 +26,14 @@ export function DatePicker() {
             !date && "text-muted-foreground"
           )}
         >
-          <CalendarIcon className="justify-self-center mr-2 h-[16.67px] w-[15px] mt-[1.67px] ml-[2.5px] text-[#344054]" />
+          <CalendarIcon
+            size={20}
+            className="justify-self-center mr-2 mt-[1.67px] ml-[2.5px] text-[#344054]"
+          />
           {date ? (
             format(date, "PPP")
           ) : (
-            <span className="text-sm">Select dates</span>
+            <span className="text-sm pt-1">Select dates</span>
           )}
         </Button>
       </PopoverTrigger>
