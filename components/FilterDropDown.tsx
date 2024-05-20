@@ -21,8 +21,11 @@ export function FilterDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="text-sm text-[#344054]">
-          <span className="mr-1">
+        <Button
+          variant="outline"
+          className="text-sm text-[#344054] font-semibold"
+        >
+          <span className="mr-3 font-sm">
             <ListFilter size={18} />
           </span>
           Filters
@@ -32,9 +35,19 @@ export function FilterDropdown() {
         <DropdownMenuLabel>Select a filter</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="pension">Pension</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="investment">
+            Investment
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="operations">
+            Operations
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="contribution">
+            Contributions
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="allocation">
+            Allocations
+          </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
