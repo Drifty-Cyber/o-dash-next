@@ -128,7 +128,7 @@ export default function Home() {
       {/* Balance and Days Filter */}
       <section className="grid grid-cols-2">
         {/* Filter and Chart */}
-        <section className="flex flex-row justify-between">
+        <section className="flex flex-row justify-between border-b pb-[20px]">
           <section className="text-[#101828] leading-[28px] text-[18px]">
             <p>Balance over time</p>
           </section>
