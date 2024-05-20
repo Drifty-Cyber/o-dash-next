@@ -8,7 +8,7 @@ export default function ChartTabButtons({ options }: ChartTabButtons) {
   const [selected, setSelected] = useState<string>(options[0]);
 
   return (
-    <div className="inline-flex space-x-2 rounded-lg border border-gray-200 bg-white shadow-sm">
+    <div className="inline-flex rounded-lg border border-gray-200 bg-white shadow-sm">
       {options.map((option, index) => (
         <button
           key={index}
