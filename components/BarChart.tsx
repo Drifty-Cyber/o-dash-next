@@ -1,3 +1,5 @@
-export default function BarChart() {
+type Props = {};
+
+export default function BarChart({}: Props) {
   return <section>Hello</section>;
 }
