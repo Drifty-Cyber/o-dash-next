@@ -68,7 +68,7 @@ export default function TabedButtons({ options }: ChartTabButtons) {
   const [selected, setSelected] = useState<string>(options[0]);
 
   return (
-    <div className="inline-flex rounded-lg border border-gray-200 bg-white shadow-sm">
+    <div className="flex rounded-lg border border-gray-200 bg-white shadow-sm transition-colors max-w-fit">
       {options.map((option, index) => (
         <button
           key={index}
@@ -77,11 +77,11 @@ export default function TabedButtons({ options }: ChartTabButtons) {
             selected === option ? "bg-[#D0D5DD]" : "bg-white hover:bg-gray-100"
           }`}
         >
-          <span
+          {/* <span
             className={`mr-2 inline-block h-2 w-2 rounded-full ${
               selected === option ? "bg-[#0052CC]" : "bg-[#B692F6]"
             }`}
-          ></span>
+          ></span> */}
           {option}
         </button>
       ))}

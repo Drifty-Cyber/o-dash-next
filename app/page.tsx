@@ -7,6 +7,7 @@ import { Filter } from "@/components/Filter";
 import { FilterDropdown } from "@/components/FilterDropDown";
 import MenuBar from "@/components/MenuBar";
 import PageTitle from "@/components/PageTitle";
+import TabedButtons from "@/components/TabbedButtons";
 import TabbedButtons from "@/components/TabbedButtons";
 import {
   Activity,
@@ -61,6 +62,7 @@ const cardData: CardProps[] = [
 export default function Home() {
   const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
   const chartTabs = ["12 months", "30 days", "7 days"];
+  const tabbedButtonsOptions = ["12 Months", "30 Days", "24 Hours", "7 Days"];
 
   function handleFilterChange(filter: string) {
     setSelectedFilter(filter);
@@ -95,7 +97,8 @@ export default function Home() {
 
       {/* Tabs/Filters */}
       <section className="grid grid-cols-2">
-        <TabbedButtons />
+        {/* <TabbedButtons /> */}
+        <TabedButtons options={tabbedButtonsOptions} />
 
         <section className="justify-self-end grid grid-cols-2 gap-[32px]">
           <section>
