@@ -14,7 +14,7 @@ export default function TabedButtons({ options }: ChartTabButtons) {
           key={index}
           onClick={() => setSelected(option)}
           className={`text-[#1D2939] flex items-center px-4 py-2 focus:outline-none transition-colors ${
-            selected === option ? "bg-[#ebedf0]" : "bg-white hover:bg-gray-100"
+            selected === option ? "bg-[#ebedf0]" : "bg-white hover:bg-[#D0D5DD]"
           }`}
         >
           {/* <span
