@@ -13,7 +13,7 @@ export default function TabedButtons({ options }: ChartTabButtons) {
         <button
           key={index}
           onClick={() => setSelected(option)}
-          className={`text-[#1D2939] flex items-center px-4 py-2 rounded-md focus:outline-none transition-colors ${
+          className={`text-[#1D2939] flex items-center px-4 py-2 focus:outline-none transition-colors ${
             selected === option ? "bg-[#ebedf0]" : "bg-white hover:bg-gray-100"
           }`}
         >
