@@ -2,20 +2,19 @@
 
 import Card, { CardProps } from "@/components/Card";
 import ChartTabButtons from "@/components/ChartTabButtons";
+import BarChart from "@/components/BarChart";
 import { DatePicker } from "@/components/DatePicker";
 import { Filter } from "@/components/Filter";
 import { FilterDropdown } from "@/components/FilterDropDown";
 import MenuBar from "@/components/MenuBar";
 import PageTitle from "@/components/PageTitle";
 import TabedButtons from "@/components/TabbedButtons";
-// import { BarChart as BarGraph } from "@/components/BarChart";
-// import { BarChart } from "@/components/BarChart";
+
 import TabbedButtons from "@/components/TabbedButtons";
 import {
   Activity,
   ArrowUp,
-  BarChart,
-  BarChart2,
+  BarChart2 as BarChartIcon,
   Gem,
   Search,
   Coins,
@@ -43,7 +42,7 @@ const cardData: CardProps[] = [
   },
   {
     label: "Trading Balance",
-    icon: BarChart2,
+    icon: BarChartIcon,
     amount: "$2,220.42",
     description: "View report",
     interest: "3.4% p.a",
@@ -145,7 +144,7 @@ export default function Home() {
           </section>
 
           <section>
-            <BarGraph />
+            <BarChart />
           </section>
         </section>
 
