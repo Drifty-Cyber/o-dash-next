@@ -8,6 +8,8 @@ import { FilterDropdown } from "@/components/FilterDropDown";
 import MenuBar from "@/components/MenuBar";
 import PageTitle from "@/components/PageTitle";
 import TabedButtons from "@/components/TabbedButtons";
+// import { BarChart as BarGraph } from "@/components/BarChart";
+// import { BarChart } from "@/components/BarChart";
 import TabbedButtons from "@/components/TabbedButtons";
 import {
   Activity,
@@ -140,6 +142,10 @@ export default function Home() {
             <section>
               <ChartTabButtons options={chartTabs} />
             </section>
+          </section>
+
+          <section>
+            <BarGraph />
           </section>
         </section>
 
