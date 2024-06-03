@@ -143,7 +143,7 @@ export default function Home() {
             </section>
           </section>
 
-          <section>
+          <section className="border-t mt-6">
             <BarChart />
           </section>
         </section>
