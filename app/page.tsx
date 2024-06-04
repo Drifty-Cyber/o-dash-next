@@ -20,6 +20,7 @@ import {
   Coins,
 } from "lucide-react";
 import { useState } from "react";
+import Transactions from "@/components/Transactions";
 
 const cardData: CardProps[] = [
   {
@@ -130,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Balance and Days Filter */}
-      <section className="grid grid-cols-2">
+      <section className="grid grid-cols-2 gap-6">
         <section>
           {/* Filter and Chart */}
           <section className="flex flex-row justify-between border-b pb-[20px]">
@@ -149,7 +150,9 @@ export default function Home() {
         </section>
 
         {/* Transaction History */}
-        <section></section>
+        <section className="bg-white rounded-lg shadow-sm border">
+          <Transactions />
+        </section>
       </section>
     </div>
   );
