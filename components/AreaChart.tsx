@@ -1,6 +1,8 @@
+"use client";
+
 import {
   ResponsiveContainer,
-  AreaChart,
+  AreaChart as AreaChartRechart,
   Area,
   XAxis,
   YAxis,
@@ -11,7 +13,6 @@ import {
 type Props = {};
 
 const data = [
-  {},
   { name: "Jan", total: Math.floor(Math.random() * 5000) + 1000 },
   { name: "Feb", total: Math.floor(Math.random() * 5000) + 1000 },
   { name: "Mar", total: Math.floor(Math.random() * 5000) + 1000 },
@@ -26,10 +27,10 @@ const data = [
   { name: "Dec", total: Math.floor(Math.random() * 5000) + 1000 },
 ];
 
-export default function BarChart({}: Props) {
+export default function AreaChart({}: Props) {
   return (
-    <ResponsiveContainer width="100%" height={700}>
-      <AreaChart
+    <ResponsiveContainer width="100%" height={632}>
+      <AreaChartRechart
         width={500}
         height={400}
         data={data}
@@ -40,9 +41,9 @@ export default function BarChart({}: Props) {
           bottom: 0,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
+        {/* <CartesianGrid strokeDasharray="3 3" /> */}
         <XAxis dataKey="name" />
-        {/* <YAxis /> */}
+        <YAxis />
         <Tooltip />
         <Area
           type="monotone"
@@ -51,7 +52,7 @@ export default function BarChart({}: Props) {
           stroke="#8884d8"
           fill="#8884d8"
         />
-        <Area
+        {/* <Area
           type="monotone"
           dataKey="total"
           stackId="1"
@@ -64,8 +65,8 @@ export default function BarChart({}: Props) {
           stackId="1"
           stroke="#ffc658"
           fill="#ffc658"
-        />
-      </AreaChart>
+        /> */}
+      </AreaChartRechart>
     </ResponsiveContainer>
   );
 }

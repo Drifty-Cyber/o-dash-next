@@ -2,7 +2,7 @@
 
 import Card, { CardProps } from "@/components/Card";
 import ChartTabButtons from "@/components/ChartTabButtons";
-import BarChart from "@/components/BarChart";
+import AreaChart from "@/components/AreaChart";
 import { DatePicker } from "@/components/DatePicker";
 import { Filter } from "@/components/Filter";
 import { FilterDropdown } from "@/components/FilterDropDown";
@@ -143,8 +143,8 @@ export default function Home() {
             </section>
           </section>
 
-          <section className="border-t mt-6">
-            <BarChart />
+          <section className="border-t mt-6 w-auto">
+            <AreaChart />
           </section>
         </section>
 
