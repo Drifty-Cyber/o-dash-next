@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface Transaction {
   type: "visa" | "mastercard" | "stripe" | "paypal" | "applepay";
@@ -21,46 +29,59 @@ const transactions: Transaction[] = [
 
 export default function Transactions() {
   return (
-    <div>
-      <h2>Recent Transaction</h2>
+    <section className="flex flex-col">
+      {/* Transaction Header */}
+      <section className="flex justify-between">
+        <h2 className="text-[#101828] text-lg font-bold">
+          Recent Transactions
+        </h2>
+        <div>
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <svg
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 11.3333C10.4602 11.3333 10.8333 10.9602 10.8333 10.4999C10.8333 10.0397 10.4602 9.66659 10 9.66659C9.53976 9.66659 9.16667 10.0397 9.16667 10.4999C9.16667 10.9602 9.53976 11.3333 10 11.3333Z"
+                  stroke="#98A2B3"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 5.49992C10.4602 5.49992 10.8333 5.12682 10.8333 4.66659C10.8333 4.20635 10.4602 3.83325 10 3.83325C9.53976 3.83325 9.16667 4.20635 9.16667 4.66659C9.16667 5.12682 9.53976 5.49992 10 5.49992Z"
+                  stroke="#98A2B3"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 17.1666C10.4602 17.1666 10.8333 16.7935 10.8333 16.3333C10.8333 15.873 10.4602 15.4999 10 15.4999C9.53976 15.4999 9.16667 15.873 9.16667 16.3333C9.16667 16.7935 9.53976 17.1666 10 17.1666Z"
+                  stroke="#98A2B3"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>Filter</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </section>
 
-      <ul>
-        {transactions.map((transaction, index) => (
-          <li key={index}>
-            {transaction.type === "visa" && (
-              <div>
-                <span>VISA ending in {transaction.endingIn}</span>
-                <span>Expiry {transaction.expiry}</span>
-              </div>
-            )}
-            {transaction.type === "mastercard" && (
-              <div>
-                <span>Mastercard ending in {transaction.endingIn}</span>
-                <span>Expiry {transaction.expiry}</span>
-              </div>
-            )}
-            {transaction.type === "stripe" && (
-              <div>
-                <span>Stripe deposit</span>
-                <span>{transaction.email}</span>
-              </div>
-            )}
-            {transaction.type === "paypal" && (
-              <div>
-                <span>PayPal deposit</span>
-                <span>{transaction.email}</span>
-              </div>
-            )}
-            {transaction.type === "applepay" && (
-              <div>
-                <span>Apply Pay</span>
-                <span>{transaction.email}</span>
-              </div>
-            )}
-            <span>{transaction.amount.toFixed(2)}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+      {/* Transaction History */}
+      <section>Hi</section>
+    </section>
   );
 }

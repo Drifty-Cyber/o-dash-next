@@ -150,7 +150,7 @@ export default function Home() {
         </section>
 
         {/* Transaction History */}
-        <section className="bg-white rounded-lg shadow-sm border">
+        <section className="bg-white rounded-lg shadow-sm border p-6">
           <Transactions />
         </section>
       </section>
