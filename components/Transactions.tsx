@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,10 +30,10 @@ const transactions: Transaction[] = [
 
 export default function Transactions() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col gap-5">
       {/* Transaction Header */}
-      <section className="flex justify-between">
-        <h2 className="text-[#101828] text-lg font-bold">
+      <section className="flex justify-between border-b">
+        <h2 className="text-[#101828] text-lg font-bold pb-5">
           Recent Transactions
         </h2>
         <div>
@@ -81,7 +82,90 @@ export default function Transactions() {
       </section>
 
       {/* Transaction History */}
-      <section>Hi</section>
+      <section>
+        <div className="bg-white shadow rounded-lg p-4">
+          <h2 className="text-lg font-medium text-gray-900 mb-4">
+            Recent Transactions
+          </h2>
+          <ul>
+            {transactions.map((transaction, index) => (
+              <li
+                key={index}
+                className="flex items-center justify-between py-2 border-b last:border-none"
+              >
+                <div className="flex items-center">
+                  {transaction.type === "Visa" && (
+                    <img
+                      src="/visa-logo.png"
+                      alt="Visa"
+                      className="h-6 w-6 mr-2"
+                    />
+                  )}
+                  {transaction.type === "Mastercard" && (
+                    <img
+                      src="/mastercard-logo.png"
+                      alt="Mastercard"
+                      className="h-6 w-6 mr-2"
+                    />
+                  )}
+                  {transaction.type === "Stripe" && (
+                    <img
+                      src="/stripe-logo.png"
+                      alt="Stripe"
+                      className="h-6 w-6 mr-2"
+                    />
+                  )}
+                  {transaction.type === "PayPal" && (
+                    <img
+                      src="/paypal-logo.png"
+                      alt="PayPal"
+                      className="h-6 w-6 mr-2"
+                    />
+                  )}
+                  {transaction.type === "Apple Pay" && (
+                    <img
+                      src="/apple-pay-logo.png"
+                      alt="Apple Pay"
+                      className="h-6 w-6 mr-2"
+                    />
+                  )}
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">
+                      {transaction.type}{" "}
+                      {transaction.number && `ending in ${transaction.number}`}
+                    </p>
+                    {transaction.expiry && (
+                      <p className="text-xs text-gray-500">
+                        Expiry {transaction.expiry}
+                      </p>
+                    )}
+                    {transaction.email && (
+                      <p className="text-xs text-gray-500">
+                        {transaction.email}
+                      </p>
+                    )}
+                  </div>
+                </div>
+                <div>
+                  <p
+                    className={`text-sm font-medium ${
+                      transaction.color === "green"
+                        ? "text-green-600"
+                        : "text-red-600"
+                    }`}
+                  >
+                    {transaction.amount > 0 ? `+` : ``}$
+                    {transaction.amount.toLocaleString()}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-4 text-center">
+            <button className="text-blue-600 hover:underline">Show more</button>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
