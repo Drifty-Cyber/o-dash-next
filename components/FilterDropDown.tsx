@@ -20,7 +20,7 @@ export function FilterDropdown() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger className="focus: outline-none">
         <Button
           variant="outline"
           className="text-sm text-[#344054] font-semibold focus:outline-none active:outline-none"
