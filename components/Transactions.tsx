@@ -55,7 +55,7 @@ export default function Transactions() {
         </h2>
         <div>
           <DropdownMenu>
-            <DropdownMenuTrigger className="focus: outline-none">
+            <DropdownMenuTrigger className="focus:outline-none">
               <svg
                 width="20"
                 height="21"
@@ -111,13 +111,14 @@ export default function Transactions() {
                 className="flex items-center justify-between py-2 border-b last:border-none"
               >
                 <div className="flex items-center">
-                  <Image
-                    src={getImageSrc(transaction.type)}
-                    alt={transaction.type}
-                    width={24}
-                    height={24}
-                    className="h-6 w-6 mr-2"
-                  />
+                  <div className="h-6 w-6 mr-2 relative">
+                    <Image
+                      src={getImageSrc(transaction.type)}
+                      alt={transaction.type}
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
                   <div>
                     <p className="text-sm font-medium text-gray-900">
                       {transaction.type.charAt(0).toUpperCase() +
