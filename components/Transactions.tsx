@@ -26,6 +26,9 @@ const transactions: Transaction[] = [
   { type: "applepay", amount: 11440, email: "molly@untitledui.com" },
   { type: "visa", amount: 11440, endingIn: "1234", expiry: "06/2024" },
   { type: "stripe", amount: 11440, email: "billing@untitledui.com" },
+  { type: "mastercard", amount: 32000, endingIn: "5678", expiry: "06/2024" },
+  { type: "stripe", amount: 6280, email: "billing@untitledui.com" },
+  { type: "visa", amount: -15000, endingIn: "1234", expiry: "06/2024" },
 ];
 
 const getImageSrc = (type: string) => {
@@ -111,23 +114,25 @@ export default function Transactions() {
                 className="flex items-center justify-between py-2 border-b last:border-none"
               >
                 <div className="flex items-center">
-                  <div className="h-6 w-6 mr-2 relative">
-                    <Image
-                      src={getImageSrc(transaction.type)}
-                      alt={transaction.type}
-                      layout="fill"
-                      objectFit="contain"
-                    />
+                  <div className="h-8 w-8 mr-6 relative">
+                    <div className="">
+                      <Image
+                        src={getImageSrc(transaction.type)}
+                        alt={transaction.type}
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-900">
+                    <p className="text-sm font-bold text-[#101828] leading-5">
                       {transaction.type.charAt(0).toUpperCase() +
                         transaction.type.slice(1)}{" "}
                       {transaction.endingIn &&
                         `ending in ${transaction.endingIn}`}
                     </p>
                     {transaction.expiry && (
-                      <p className="text-xs text-gray-500">
+                      <p className="text-xs text-[#667085]">
                         Expiry {transaction.expiry}
                       </p>
                     )}
