@@ -56,7 +56,7 @@ export default function Transactions() {
         <h2 className="text-[#101828] text-lg font-bold pb-5">
           Recent Transactions
         </h2>
-        <div>
+        <div className="relative">
           <DropdownMenu>
             <DropdownMenuTrigger className="focus:outline-none">
               <svg
@@ -89,7 +89,7 @@ export default function Transactions() {
                 />
               </svg>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="">
               <DropdownMenuLabel>Filter</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Profile</DropdownMenuItem>
@@ -132,12 +132,12 @@ export default function Transactions() {
                         `ending in ${transaction.endingIn}`}
                     </p>
                     {transaction.expiry && (
-                      <p className="text-xs text-[#667085]">
+                      <p className="text-[#667085] text-sm">
                         Expiry {transaction.expiry}
                       </p>
                     )}
                     {transaction.email && (
-                      <p className="text-xs text-gray-500">
+                      <p className="text-sm text-[#667085]">
                         {transaction.email}
                       </p>
                     )}
@@ -145,8 +145,10 @@ export default function Transactions() {
                 </div>
                 <div>
                   <p
-                    className={`text-sm font-medium ${
-                      transaction.amount > 0 ? "text-green-600" : "text-red-600"
+                    className={`text-sm font-bold ${
+                      transaction.amount > 0
+                        ? "text-[#039855]"
+                        : "text-[#EB1313]"
                     }`}
                   >
                     {transaction.amount > 0 ? `+` : ``}
@@ -156,7 +158,7 @@ export default function Transactions() {
               </li>
             ))}
           </ul>
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-left">
             <button className="text-blue-600 hover:underline">Show more</button>
           </div>
         </div>
