@@ -154,6 +154,12 @@ export default function Home() {
           <Transactions />
         </section>
       </section>
+
+      {/* Pie Chart &  */}
+      <section className="grid grid-cols-2 gap-3">
+        <section>Hello</section>
+        <section>Hello</section>
+      </section>
     </div>
   );
 }
