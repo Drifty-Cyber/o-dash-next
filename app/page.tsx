@@ -157,8 +157,12 @@ export default function Home() {
 
       {/* Pie Chart &  */}
       <section className="grid grid-cols-2 gap-3">
-        <section className="bg-white rounded-lg shadow-sm border"></section>
-        <section className="bg-white rounded-lg shadow-sm border"></section>
+        <section className="bg-white rounded-lg shadow-sm border">
+          <section>Left</section>
+        </section>
+        <section className="bg-white rounded-lg shadow-sm border">
+          <section>Right</section>
+        </section>
       </section>
     </div>
   );
