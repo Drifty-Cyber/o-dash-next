@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Transactions from "@/components/Transactions";
+import PieChartComponent from "@/components/PieChart";
 
 const cardData: CardProps[] = [
   {
@@ -158,7 +159,9 @@ export default function Home() {
       {/* Pie Chart &  */}
       <section className="grid grid-cols-2 gap-3">
         <section className="bg-white rounded-lg shadow-sm border">
-          <section>Left</section>
+          <section>
+            <PieChartComponent />
+          </section>
         </section>
         <section className="bg-white rounded-lg shadow-sm border">
           <section>Right</section>
