@@ -158,10 +158,11 @@ export default function Home() {
 
       {/* Pie Chart &  */}
       <section className="grid grid-cols-2 gap-3">
-        <section className="bg-white rounded-lg shadow-sm border">
+        <section className="bg-white rounded-lg shadow-sm border flex justify-between items-center gap-2">
           <section>
             <PieChartComponent />
           </section>
+          <section>Right</section>
         </section>
         <section className="bg-white rounded-lg shadow-sm border">
           <section>Right</section>
