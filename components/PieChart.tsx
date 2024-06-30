@@ -29,8 +29,8 @@ const data01 = [
 
 export default function PieChartComponent() {
   return (
-    <ResponsiveContainer width="100%" height={200}>
-      <PieChart width={120} height={120}>
+    <ResponsiveContainer width="30%" height={200}>
+      <PieChart width={50} height={50}>
         <Pie
           data={data01}
           nameKey="name"
