@@ -165,7 +165,9 @@ export default function Home() {
           <section>Left component, right side</section>
         </section>
         <section className="bg-white rounded-lg shadow-sm border">
-          <section>Right</section>
+          <section>
+            <PieChartComponent />
+          </section>
         </section>
       </section>
     </div>
