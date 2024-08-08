@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* Pie Chart &  */}
-      <section className="grid grid-cols-2 gap-3">
+      {/* <section className="grid grid-cols-2 gap-3">
         <section className="bg-white rounded-lg shadow-sm border lg:h-[205px]">
           <section>
             <PieChartComponent />
@@ -166,6 +166,45 @@ export default function Home() {
         </section>
         <section className="bg-white rounded-lg shadow-sm border">
           <section>
+            <PieChartComponent />
+          </section>
+        </section>
+      </section> */}
+
+      <section className="grid grid-cols-2 gap-3">
+        <section className="bg-white rounded-lg shadow-sm border lg:h-[205px]">
+          <section className="flex items-center justify-between p-4">
+            <section>
+              <h3 className="text-lg font-medium">Total Contribution</h3>
+              <p className="text-gray-500 text-sm">Current balance</p>
+            </section>
+            <section>
+              <div className="text-right">
+                <p className="text-2xl font-bold">$40,206.20</p>
+                <p className="text-green-500 text-sm">+ 3.4%</p>
+              </div>
+            </section>
+          </section>
+          <section className="mx-4">
+            <PieChartComponent />
+          </section>
+        </section>
+        <section className="bg-white rounded-lg shadow-sm border">
+          <section className="flex items-center justify-between p-4">
+            <section>
+              <h3 className="text-lg font-medium">
+                Total Voluntary Contribution
+              </h3>
+              <p className="text-gray-500 text-sm">Current balance</p>
+            </section>
+            <section>
+              <div className="text-right">
+                <p className="text-2xl font-bold">$6,421.10</p>
+                <p className="text-green-500 text-sm">+ 2.0%</p>
+              </div>
+            </section>
+          </section>
+          <section className="mx-4">
             <PieChartComponent />
           </section>
         </section>
