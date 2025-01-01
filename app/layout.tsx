@@ -3,6 +3,8 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import SideNavBar from "@/components/SideNavbar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 // const poppins = Poppins({ weight: "600", subsets: ["latin"] });
@@ -25,8 +27,14 @@ export default function RootLayout({
           inter.className
         )}
       >
-        <SideNavBar />
-        <div className="p-8 w-full bg-[#FCFCFD]">{children}</div>
+        <SidebarProvider>
+          <AppSidebar />
+          {/* <SideNavBar /> */}
+          <div className="p-8 w-full bg-[#FCFCFD]">
+            <SidebarTrigger />
+            {children}
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );
