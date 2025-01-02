@@ -1,4 +1,16 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import {
+  Calendar,
+  Home,
+  Inbox,
+  Search,
+  Settings,
+  Activity,
+  BarChart2,
+  Flag,
+  Layers,
+  LifeBuoy,
+  Users,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -14,29 +26,29 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
+    title: "Overview",
     url: "#",
-    icon: Home,
+    icon: Activity,
   },
   {
-    title: "Inbox",
+    title: "Analytics",
     url: "#",
-    icon: Inbox,
+    icon: BarChart2,
   },
   {
-    title: "Calendar",
+    title: "Account Details",
     url: "#",
-    icon: Calendar,
+    icon: Layers,
   },
   {
-    title: "Search",
+    title: "Account Officer",
     url: "#",
-    icon: Search,
+    icon: Users,
   },
   {
-    title: "Settings",
+    title: "Report",
     url: "#",
-    icon: Settings,
+    icon: Flag,
   },
 ];
 
