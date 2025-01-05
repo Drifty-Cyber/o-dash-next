@@ -27,6 +27,7 @@ import {
 import { Button } from "./ui/button";
 import { DropdownMenu, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Separator } from "./ui/separator";
+import { Input } from "./ui/input";
 
 // Menu items.
 const items = [
@@ -88,6 +89,8 @@ export function AppSidebar() {
           <SidebarGroupLabel></SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
+              <Input type="search" placeholder="Search" />
+
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
