@@ -89,7 +89,19 @@ export function AppSidebar() {
           <SidebarGroupLabel></SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              <Input type="search" placeholder="Search" />
+              {/* <Input type="search" placeholder="Search" /> */}
+              <div className="relative  mb-3">
+                <Search
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  size={18}
+                />
+
+                <Input
+                  type="search"
+                  placeholder="Search"
+                  className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none"
+                />
+              </div>
 
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
