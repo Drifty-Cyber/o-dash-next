@@ -75,7 +75,7 @@ const footerItems = [
 
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar className="w-80">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -138,7 +138,7 @@ export function AppSidebar() {
 
           <Separator />
 
-          <div className="flex items-center justify-between p-4 border-t bg-white">
+          <div className="flex items-center justify-between p-4 border-t bg-white mx-2">
             {/* Profile Section */}
             <div className="flex items-center">
               {/* Profile Image */}
